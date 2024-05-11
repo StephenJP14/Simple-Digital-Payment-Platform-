@@ -62,8 +62,6 @@
     </script>
 
     <script src="https://unpkg.com/html5-qrcode"></script>
-    <script src="script.js"></script>
-    <script src="script3.js"></script>
     <script>
         document.getElementById("qrcode").style.display = "none";
 
