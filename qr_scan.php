@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Scanner</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,16 +28,19 @@
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
 
-            <!-- Modal content-->
+            
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Masukkan Nomial</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- <form action="transfer_qr.php" role="form"> -->
-                    <h1>test</h1>
-                    <!-- </form> -->
+                    <form action="transfer.php">
+                        <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal Transfer">
+                        <input type="submit" value="Transfer" class="btn btn-primary">
+                    </form>
+                    
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -48,12 +52,17 @@
 
 
 
-
-    <script src="https://unpkg.com/html5-qrcode"></script>
-    <script src="script.js"></script>
+    
     <?php
     session_start();
     ?>
+    <script>
+        let uid = "<?php echo $_SESSION['uid']; ?>";
+    </script>
+    
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
+    <script src="script3.js"></script>
     <script>
         document.getElementById("qrcode").style.display = "none";
 
@@ -62,7 +71,7 @@
             console.log(uid);
             // $("#myModal").modal();
             if (document.getElementById("qrcode").style.display == "none") {
-                // var qrcode = new QRCode("qrcode", "transfer.php?sender=" + uid + "&receiver=" + uid);
+                var qrcode = new QRCode("qrcode", "transfer.php?sender=" + uid + "&receiver=" + uid);
             }
             document.getElementById("qrcode").style.display = "flex";
             document.getElementById("qrcode").style.justifyContent = "center";
