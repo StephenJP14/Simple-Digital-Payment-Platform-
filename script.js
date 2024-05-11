@@ -1,5 +1,3 @@
-console.log("jalan");
-
 function domReady(fn) {
     if (
         document.readyState === "complete" ||

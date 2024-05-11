@@ -18,7 +18,7 @@
         <h1>Scan QR Codes</h1>
         <div class="section" style="display: flex; flex-direction:column">
             <div id="my-qr-reader"></div>
-            <a onclick="showQR()">Show QR Code</a>
+            <a onclick="showQR()">Show My QR Code</a>
             <a href="home_page.php">Cancel</a>
             <div id="qrcode"></div>
         </div>
@@ -62,6 +62,7 @@
     </script>
 
     <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
     <script>
         document.getElementById("qrcode").style.display = "none";
 
