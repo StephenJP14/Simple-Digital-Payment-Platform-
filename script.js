@@ -17,8 +17,19 @@ domReady(function() {
     // If found you qr code
     function onScanSuccess(decodeText, decodeResult) {
         // alert("You Qr is : " + decodeText, decodeResult);
-        // console.log(decodeResult);
-        // console.log(decodeText);
+        // console.log(decodeResult);   
+        console.log(decodeText);
+        let receiver = "";
+        try {
+            let url = new URLSearchParams(decodeText);
+            receiver = url.get("receiver");
+            console.log(receiver);
+        }
+        catch (error) {
+            console.log("error");
+        }
+        $("#sender").val(currentUser);
+        $("#receiver").val(receiver);
         $("#myModal").modal();
         // window.open(decodeText, '_blank');
     }
