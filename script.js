@@ -26,6 +26,10 @@ domReady(function() {
         catch (error) {
             console.log("error");
         }
+        document.getElementById("qrcode").style.display = "none";
+        document.getElementById("form").style.display = "flex";
+        document.getElementById("form").style.justifyContent = "center";
+        $(".modal-title").text("Masukkan Nominal Transfer");
         $("#sender").val(currentUser);
         $("#receiver").val(receiver);
         $("#myModal").modal();
