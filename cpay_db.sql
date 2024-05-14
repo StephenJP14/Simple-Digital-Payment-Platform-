@@ -75,7 +75,7 @@ CREATE TABLE `transaction` (
   `t_timestamp` timestamp NULL DEFAULT NULL,
   `amount` int DEFAULT NULL,
   `t_info` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Triggers `transaction`
@@ -115,7 +115,7 @@ CREATE TABLE `user` (
   `date_joined` date NOT NULL,
   `role_id` int DEFAULT NULL,
   `user_balance` int DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Indexes for dumped tables

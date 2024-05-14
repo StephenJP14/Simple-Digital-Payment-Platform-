@@ -19,8 +19,12 @@
         die("Connection Failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT `uid`, `name` FROM `user` WHERE `email` = '$email' AND `password` = '$password';";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare('SELECT `uid`, `name` FROM `user` WHERE `email` = ? AND `password` = ?');
+    $stmt->bind_param('ss', $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $_SESSION['uid'] = $row['uid'];

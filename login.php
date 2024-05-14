@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1>Login</h1>
     <?php
     session_start();
     if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
@@ -22,6 +23,7 @@
                 <input type="password" name="password" id="password">
                 <input type="submit" value="Login">
             </form>
+            <a href="register.php">Don't Have an Account ?</a>
             END;
     } else {
         header("Location: home_page.php");

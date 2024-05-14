@@ -9,3 +9,10 @@ Kalau respon pass_check_handler.php bener, maka dari password.php diarahin ke tr
 
 
 login.php -> login_handler.php -> home_page.php -> qr_scan.php -> (password.php <-> pass_check_handler.php) -> transaction_handler.php
+
+
+Session Menyimpan :
+1. uid
+2. email
+3. name
+
