@@ -51,7 +51,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <form class="col-md-4 offset-md-4" action="transaction_handler.php" method="post">
+            <form class="col-md-4 offset-md-4" action="./handlers/transaction_handler.php" method="post">
                 <input type="text" name="sender" value="<?php echo $sender; ?>" hidden>
                 <input type="text" name="receiver" value="<?php echo $receiver; ?>" hidden>
                 <input type="text" name="nominal" value="<?php echo $nominal; ?>" hidden>
@@ -116,10 +116,10 @@
                 $("#passwordInput").val(hiddenPassword);
             }
 
-            function sendPasswordToServer(password) {
+            function sendPasswordToServer(password) { 
                 $.ajax({
                     type: "POST",
-                    url: "pass_check_handler.php",
+                    url: "./handlers/pass_check_handler.php",
                     data: {
                         password: password
                     },
@@ -131,7 +131,7 @@
                         } else {
                             if (input_left === 0) {
                                 alert("You have reached maximum attempt. Please try again later.");
-                                window.location.href = "home_page.php";
+                                window.location.href = "dashboard.php";
                             }else{
                                 alert(`Password is incorrect. \nYou have ${input_left} attempt left.`);
                                 input_left--;

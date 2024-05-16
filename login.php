@@ -16,7 +16,7 @@
         //     echo PHP_SESSION_NONE;
         // }
         echo <<<END
-            <form action="login_handler.php" method="POST">
+            <form action="./handlers/login_handler.php" method="POST">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
                 <label for="password">Password</label>
@@ -26,7 +26,7 @@
             <a href="register.php">Don't Have an Account ?</a>
             END;
     } else {
-        header("Location: home_page.php");
+        header("Location: dashboard.php");
         exit();
     }
     ?>

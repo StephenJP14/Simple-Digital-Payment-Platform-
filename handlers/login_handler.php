@@ -37,12 +37,12 @@
         echo "Welcome $name <br>";
         echo "Your UID is $uid <br>";
 
-        header("Location: home_page.php");
+        header("Location: ../dashboard.php");
         exit(); // Ensure script stops execution after redirect
     }else{
         $conn->close();
         echo "Salahh";
-        header("Location: login.php");
+        header("Location: ../login.php");
         exit(); // Ensure script stops execution after redirect
     }
     

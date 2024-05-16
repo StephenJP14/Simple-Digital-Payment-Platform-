@@ -26,7 +26,7 @@
             <div class="section" style="display: flex; flex-direction:column">
                 <div id="my-qr-reader"></div>
                 <a onclick="showQR()">Show My QR Code</a>
-                <a href="home_page.php">Cancel</a>
+                <a href="dashboard.php">Cancel</a>
                 
             </div>
         </div>

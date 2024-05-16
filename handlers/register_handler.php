@@ -62,7 +62,7 @@
         echo $_SESSION['uid'] . "<br>";
         echo $_SESSION['name'];
 
-        header("Location: home_page.php");
+        header("Location: ../dashboard.php");
         exit(); // Ensure script stops execution after redirect
     }
 

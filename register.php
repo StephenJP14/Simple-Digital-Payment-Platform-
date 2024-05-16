@@ -10,7 +10,7 @@
     <?php
         if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
             echo <<<END
-                <form action="register_handler.php" method="post">
+                <form action="./handlers/register_handler.php" method="post">
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="address" placeholder="Address">
                     <input type="text" name="phone" placeholder="Phone">
