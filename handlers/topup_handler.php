@@ -32,4 +32,5 @@ $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
 echo "Top Up Handler Test Success<br>";
+$conn->close();
 ?>
