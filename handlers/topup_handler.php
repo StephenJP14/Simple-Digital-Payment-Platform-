@@ -20,37 +20,16 @@ if ($conn->connect_error) {
     die("Connection failed" . $conn->connect_error);
 }
 
-// $stmt = $conn->prepare('SELECT `user_balance` FROM  `user` WHERE `uid` = ?');
-// $stmt->bind_param('i', $sender);
-// $stmt->execute();
-// $result = $stmt->get_result();
-// $stmt->close();
 
-// $balance = $result->fetch_assoc()['user_balance'];  
 
 $note = "Top up";
 $date = date("Y-m-d H:i:s");
 
 
 $stmt = $conn->prepare('INSERT INTO `transaction` (`sender_merchant_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');
-$stmt->bind_param('iisss', $sender, $receiver, $date, $nominal, $note);
+$stmt->bind_param('iisss', $merchant, $receiver, $date, $amount, $note);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "Transaction Handler Test Success<br>";
+echo "Top Up Handler Test Success<br>";
 ?>

@@ -20,12 +20,16 @@
     exit();
   }
   ?>
+  <?php
+    echo $_SESSION['name'];
+  
+  ?>
   <header class="linear-background">
     <div class="container">
       <nav>
         <div class="logo"><span class="green-text">C</span>-Pay</div>
         <div class="profile">
-          <p><? echo $_SESSION['name']; ?></p>
+          <p><?php echo $_SESSION['name']; ?></p>
           <div class="profile-pict"></div>
           <a href="logout.php">
             <ion-icon name="log-out-outline"></ion-icon>
