@@ -24,7 +24,7 @@
       <nav>
         <div class="logo"><span class="green-text">C</span>-Pay</div>
         <div class="profile">
-          <p><? echo $_SESSION['name'] ?></p>
+          <p><? echo $_SESSION['name']; ?></p>
           <div class="profile-pict"></div>
           <a href="logout.php">
             <ion-icon name="log-out-outline"></ion-icon>
