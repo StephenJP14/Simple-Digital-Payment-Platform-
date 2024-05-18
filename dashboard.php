@@ -14,15 +14,10 @@
 <body>
   <?php
   session_start();
-  echo $_SESSION['email'];
   if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
     header("Location: login.php");
     exit();
   }
-  ?>
-  <?php
-    echo $_SESSION['name'];
-  
   ?>
   <header class="linear-background">
     <div class="container">
