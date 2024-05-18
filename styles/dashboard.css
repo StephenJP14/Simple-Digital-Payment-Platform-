@@ -1,0 +1,110 @@
+:root {
+  --green: #14ae5c;
+  --smooth-gray: #3a3a3a;
+  font-size: 16px;
+  --padding-x: 0 10%;
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif, "Poppins";
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+* .faded-text {
+  opacity: 0.8;
+}
+* .green-text {
+  color: var(--green);
+}
+
+body {
+  background-color: black;
+}
+
+.logo,
+.logo .green-text {
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(to right, rgb(10, 10, 10), rgb(0, 36, 17, 0.5));
+  padding-bottom: 32px;
+}
+
+header .container {
+  padding: 0 10%;
+}
+
+nav {
+  padding: 4% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+nav .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+nav .profile .profile-pict {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.profile ion-icon {
+  font-size: 2rem;
+  color: rgb(200, 200, 200);
+}
+
+.balance {
+  padding: 32px 0;
+}
+.balance h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.features {
+  display: flex;
+  /* justify-content: space-between; */
+  height: fit-content;
+  gap: 32px;
+  width: 100%;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.feature:hover {
+  border: 1px solid rgb(160, 160, 160);
+}
+.feature ion-icon {
+  font-size: 4rem;
+  padding-bottom: 12px;
+}
+
+section {
+  padding: 2% 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .feature ion-icon {
+    font-size: 2.5rem;
+  }
+}

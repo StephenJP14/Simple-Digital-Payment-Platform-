@@ -23,8 +23,12 @@ a:hover {
   color: var(--green);
 }
 
+.linear-background {
+  background: linear-gradient(to right, rgb(15, 15, 15), #002411);
+}
+
 body {
-  background-color: rgb(08, 08, 08);
+  background-color: black;
 }
 
 .subheadline {
@@ -170,7 +174,7 @@ section .section-container {
 }
 
 .section-3 {
-  background-color: var(--green);
+  background: linear-gradient(to right, rgb(15, 15, 15), #002411);
 }
 
 .footer footer {
