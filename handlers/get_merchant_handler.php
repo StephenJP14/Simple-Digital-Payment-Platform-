@@ -20,4 +20,4 @@ $conn->close();
 echo json_encode($merchants);
 echo "Get Merchant Handler Test Success<br>";
 
-?>-
+?>
