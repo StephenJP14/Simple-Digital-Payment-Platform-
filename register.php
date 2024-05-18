@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="./styles/login.css" />
+  <title>Register</title>
 </head>
+
 <body>
-    <h1>Register</h1>
-    <?php
-        if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
-            echo <<<END
-                <form action="./handlers/register_handler.php" method="post">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text" name="address" placeholder="Address">
-                    <input type="text" name="phone" placeholder="Phone">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="password" name="password" placeholder="Password">
-                    <input type="password" name="password2" placeholder="Confirm Password">
-                    <input type="submit">
-                </form>
-                <a href="login.php">I Have an Account</a>
-                END;
-        } else {
-            header("Location: login.php");
-            exit();
-        }
-    ?>
-
-
+  <?php
+  if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
+    echo <<<END
+        <nav>
+          <a href="index.html">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </a>
+          <div class="logo"><span class="green-text">C</span>-Pay Register</div>
+        </nav>
+        <form action="./handlers/register_handler.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Your name" />
+    
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Your address"
+          />
+    
+          <label for="phone">Phone:</label>
+          <input type="text" name="phone" id="phone" placeholder="you@gmail.com" />
+    
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="you@gmail.com" />
+    
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="..." />
+          <label for="password">Confirm password:</label>
+          <input type="password" name="password2" id="password" placeholder="..." />
+    
+          <input type="submit" value="Register" id="submit" />
+          <br />
+          <a href="login.html">Already have an account?</a>
+        </form>
+      END;
+  } else {
+    header("Location: login.php");
+    exit();
+  }
+  ?>
 </body>
+
 </html>
