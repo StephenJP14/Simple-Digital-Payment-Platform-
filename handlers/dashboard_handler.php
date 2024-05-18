@@ -4,10 +4,10 @@
 
     $uid = $_SESSION['uid'];
 
-    $servername = "localhost:3307";
-    $sql_username = "root";
-    $sql_password = "";
-    $dbname = "c_pay";
+    $servername = "localhost:3306";
+    $sql_username = "stephen";
+    $sql_password = "o8ivx1(EzV(I-9M4M7";
+    $dbname = "stephen_db";
 
     $conn = new mysqli($servername, $sql_username, $sql_password, $dbname);
 
@@ -29,9 +29,10 @@
     $result = $stmt->get_result();
     $stmt->close();
 
-    // $transactions = $result->fetch_assoc(MYSQLI_ASSOC);
-
-    while ($row = $result->fetch_assoc()) {
+    $transactions = $result->fetch_all(MYSQLI_ASSOC);
+    
+    foreach($transactions as $row){
+        // echo json_encode($transaction);
         if ($row['sender_id'] === $uid) {
             $row['amount'] = -$row['amount'];
         }
@@ -43,13 +44,12 @@
             $stmt->close();
             $row['sender_id'] = $result->fetch_assoc()['merchant_name'];
         }
-        $transactions[] = $row;
+        $all_transactions[] = $row;
     }
-
-    $conn->close();
     
+    $conn->close();
 
-    echo json_encode([$balance, $transactions]);
+    echo json_encode([$balance, $all_transactions]);
    
     exit();
 

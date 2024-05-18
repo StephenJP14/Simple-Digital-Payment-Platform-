@@ -6,10 +6,10 @@
     echo "Email: $email <br>";
     echo "Password: $password <br>";
 
-    $servername = "localhost:3307";
-    $sql_username = "root";
-    $sql_password = "";
-    $dbname = "c_pay";
+    $servername = "localhost:3306";
+    $sql_username = "stephen";
+    $sql_password = "o8ivx1(EzV(I-9M4M7";
+    $dbname = "stephen_db";
 
     // Create Connection
     $conn = new mysqli($servername, $sql_username, $sql_password, $dbname);
