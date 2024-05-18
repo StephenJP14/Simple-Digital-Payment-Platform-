@@ -2,12 +2,12 @@
 session_start();
 $sender = $_POST['sender'];
 $receiver = $_POST['receiver'];
-$amount = $_POST['amount'];
+$nominal = $_POST['nominal'];
 $password = $_POST['password'];
 
 echo "Sender: $sender <br>";
 echo "Receiver: $receiver <br>";
-echo "amount: $amount <br>";
+echo "Nominal: $nominal <br>";
 echo "Password: $password <br>";
 
 $servername = "localhost:3306";
@@ -31,26 +31,17 @@ $balance = $result->fetch_assoc()['user_balance'];
 $note = "Transfer";
 $date = date("Y-m-d H:i:s");
 
-
-$stmt = $conn->prepare('INSERT INTO `transaction` (`sender_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');
-$stmt->bind_param('iisss', $sender, $receiver, $date, $amount, $note);
-$stmt->execute();
-$result = $stmt->get_result();
-$stmt->close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if ($balance < $nominal){
+    echo "Transaction Failed, Your balance is not sufficient";
+    exit();
+}else{
+    $stmt = $conn->prepare('INSERT INTO `transaction` (`sender_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');
+    $stmt->bind_param('iisss', $sender, $receiver, $date, $nominal, $note);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+    $conn->close();
+}
 
 echo "Transaction Handler Test Success<br>";
 ?>
