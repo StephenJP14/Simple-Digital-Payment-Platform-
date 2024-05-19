@@ -43,7 +43,7 @@
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-      <div class="modal-content" style="background-color: rgb(25, 25, 25)">
+      <div class="modal-content" style="background-color: rgb(255, 255, 255)">
         <div class="modal-header" style="border-color: rgb(80, 80, 80);">
           <button type="button" class="close" data-dismiss="modal" style="color: white">
             &times;
