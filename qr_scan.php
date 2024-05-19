@@ -55,7 +55,7 @@
           <form action="password.php" method="post" id="form">
             <input type="text" id="sender" name="sender" hidden />
             <input type="text" id="receiver" name="receiver" hidden />
-            <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required />
+            <input type="number" name="nominal" id="nominal" placeholder="Masukkan Nominal" required style="color:white; background-color: transparent;" />
             <input type="submit" value="Transfer" class="btn primary-btn" id="submit" />
           </form>
         </div>
