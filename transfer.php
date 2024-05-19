@@ -29,7 +29,7 @@
     <form action="password.php" method="post">
         <input id="sender" type="text" name="sender" value="<?php echo $_SESSION['uid']; ?>" hidden>
         <input id="receiver" type="text" name="receiver" value="" hidden>
-        <input id="receiverName" type="text" name="receiverName" placeholder="" value="" readonly>
+        <input id="receiverName" type="text" name="receiverName" placeholder="Receiver Name" value="" readonly>
         <label for="nominal">Nominal:</label>
         <input type="text" name="nominal" placeholder="Amount" id="nominal">
         <label for="rec-phone-num">Receiver phone number:</label>
