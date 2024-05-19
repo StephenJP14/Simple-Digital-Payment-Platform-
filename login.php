@@ -17,6 +17,11 @@
     // if (session_status() === PHP_SESSION_NONE){
     //     echo PHP_SESSION_NONE;
     // }
+    if(isset($_GET['result'])){
+      if($_GET['result'] === 'false'){
+        echo "<script type='text/jscript'>alert('Wrong Password!!.')</script>";
+      }
+    }
     echo <<<END
         <nav>
           <a href="index.html">
