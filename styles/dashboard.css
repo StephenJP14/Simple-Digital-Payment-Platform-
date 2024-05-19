@@ -44,7 +44,7 @@ header .container {
 }
 
 nav {
-  padding: 4% 0;
+  padding: 2% 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,12 +56,6 @@ nav .profile {
   justify-content: center;
   gap: 24px;
 }
-nav .profile .profile-pict {
-  width: 40px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-color: #fff;
-}
 .profile ion-icon {
   font-size: 2rem;
   color: rgb(200, 200, 200);
@@ -72,7 +66,7 @@ nav .profile .profile-pict {
 }
 .balance h1 {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .features {
@@ -87,6 +81,7 @@ nav .profile .profile-pict {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 24px;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -99,12 +94,39 @@ nav .profile .profile-pict {
   padding-bottom: 12px;
 }
 
-section {
-  padding: 2% 10%;
+section .container {
+  padding: 4% 10%;
 }
 
-@media only screen and (max-width: 600px) {
+.floating-qr {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    font-size: 14px;
+  }
+  nav {
+    padding: 10% 0;
+  }
+  header .container {
+    padding: 0 10%;
+  }
+  .balance h1 {
+    font-size: 2rem;
+  }
+  .features {
+    margin-top: 32px;
+    justify-content: space-between;
+  }
+  .feature {
+    padding: 0;
+  }
   .feature ion-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+  .feature p {
+    font-size: 1rem;
   }
 }

@@ -40,6 +40,34 @@
       <ion-icon name="cloud-upload-outline"></ion-icon> Scan an Image
     </button> -->
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Masukkan Nomial</h4>
+        </div>
+        <div class="modal-body">
+          <div id="qrcode"></div>
+          <form action="password.php" method="post" id="form">
+            <input type="text" id="sender" name="sender" hidden>
+            <input type="text" id="receiver" name="receiver" hidden>
+            <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required>
+            <input type="submit" value="Transfer" class="btn btn-primary">
+          </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
   <script>
     var currentUser = "<?php echo $_SESSION['uid']; ?>";
   </script>

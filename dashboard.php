@@ -33,7 +33,7 @@
       </nav>
       <div class="balance">
         <p class="faded-text">Balance:</p>
-        <h1 class="green-text" id="balance">-</h1>
+        <h1 class="green-text" id="balance">Rp200.000.000.000,-</h1>
       </div>
       <div class="features">
         <a href="qr_scan.php" class="feature">
@@ -54,50 +54,29 @@
   <section>
     <b>History:</b>
   </section>
-
-  <form action="topup.php" method="post" style="background-color:red;">
-    <input type="text" name="topup" placeholder="Topup" style="color:black;">
-    
-    <label for="merchant" style="color:black;">Choose your Bank:</label>
-    <select name="merchant" id="merchant" style="background-color:cyan;color:black;">
-      <!-- <option value="volvo">Volvo</option> -->
-    </select>
-    <input type="submit" value="Topup" style="color:black;">
-  </form>
-
-
   <script>
     $.ajax({
       type: "GET",
-      url: "./handlers/das
-        hboard_balance.php",
+      url: "./handlers/dashboard_balance.php",
       data: {
+        // sender: 1,
+        // receiver: 2,
+        // nominal: 1000,
+        // password: "password"
       },
       success: function(data) {
         data = jQuery.parseJSON(data);
         let balance = data[0];
         let transaction_history = data[1];
         // console.log(typeof(data));
-        con        // console.log(transaction_history[0]);
+        console.log(data);
+        // console.log(balance);
+        // console.log(transaction_history[0]);
 
         $('#balance').text(`Rp${balance}`);
 
         transaction_history.forEach(element => {
           $('table').append('<tr><td>' + element['sender_id'] + '</td><td>' + element['receiver_id'] + '</td><td>' + element['amount'] + '</td><td>' + element['t_date'] + '</td><td>' + element['t_info'] + '</td></tr>');
-        });
-      }
-    });
-    $.ajax({
-      type: "GET",
-      url: "./handlers/get_merchant.php",
-      data: {
-      },
-      success: function(data) {
-        data = jQuery.parseJSON(data);
-        let merchants = data;
-        console.log(data);
-        merchants.forEach(element => {
-          $('#merchant').append(`<option value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
         });
       }
     });
