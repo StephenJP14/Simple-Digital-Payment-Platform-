@@ -10,15 +10,14 @@ $sql_username = "stephen";
 $sql_password = "o8ivx1(EzV(I-9M4M7";
 $dbname = "stephen_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $sql_username, $sql_password, $dbname);
+
 if ($conn->connect_error) {
-    die("Connection Failed: " . $conn->connect_error);
+    die("Connection failed" . $conn->connect_error);
 }
 
-$hashed_pin = hash('sha256', $password);
-
-$stmt = $conn->prepare('SELECT `name` FROM `user` WHERE `uid` = ? AND `password` = ?');
-$stmt->bind_param('s', $uid, $hashed_pin);
+$stmt = $conn->prepare('SELECT `name` FROM `user` WHERE `uid` = ? AND `transaction_pin` = ?');
+$stmt->bind_param('ss', $uid, $hashed_transaction_pin);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();

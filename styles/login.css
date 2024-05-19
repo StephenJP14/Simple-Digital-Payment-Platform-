@@ -112,6 +112,22 @@ input:active {
   font-weight: 600;
 }
 
+.secondary-btn {
+  border: none;
+  background-color: transparent;
+  padding: 12px 24px;
+  flex-grow: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1rem;
+  background-color: rgb(15, 15, 15);
+  border: 1px solid rgb(120, 120, 120);
+}
+
 @media only screen and (max-width: 800px) {
   nav {
     width: 90%;

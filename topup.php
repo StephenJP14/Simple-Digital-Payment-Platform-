@@ -56,7 +56,7 @@
                 let merchants = data;
                 console.log(data);
                 merchants.forEach(element => {
-                    $('#merchant').append(`<option style="color: black;" value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
+                    $('#merchant').append(`<option style="color: white;" value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
                 });
             }
         });
