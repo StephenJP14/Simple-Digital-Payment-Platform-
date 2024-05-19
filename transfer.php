@@ -30,7 +30,7 @@
         function checkUser(){
             var receiver = document.querySelector('input[name="receiver"]').value;
             $.ajax({
-                url: 'checkUser.php',
+                url: './handlers/check_receiver.php',
                 type: 'post',
                 data: {receiver: receiver},
                 success: function(response){
