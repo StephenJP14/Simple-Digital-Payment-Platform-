@@ -31,7 +31,7 @@
           <input type="password" name="password" id="password" placeholder="..." />
           <input type="submit" value="Login" id="submit" />
           <br />
-          <a href="register.html">Dont have an account?</a>
+          <a href="register.php">Dont have an account?</a>
         </form>
       END;
   } else {
