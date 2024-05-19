@@ -34,8 +34,8 @@
         <input required type="text" name="nominal" placeholder="Amount" id="nominal">
         <label for="rec-phone-num">Receiver phone number:</label>
         <input required id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
-        <button type="button" onclick="checkUser()" class="secondary-btn" style="color: white;">Verify Receiver</button>
-        <button type="button" id="submitButton" class="submit">Proceed</button>
+        <button type="button" onclick="checkUser()" class="secondary-btn" style="background-color: black; color: white;">Verify Receiver</button>
+        <button type="button" id="submitButton" class="submit" style="background-color: black; color: white;">Proceed</button>
     </form>
 
     <script>
