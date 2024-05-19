@@ -105,12 +105,12 @@ input:active {
   border: 1px solid var(--green);
 }
 
-#submit {
-  background-color: var(--green);
-  border: 1px solid var(--green);
-  cursor: pointer;
-  font-weight: 600;
-}
+#submitButton{
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    cursor: pointer;
+    font-weight: 600;
+  }
 
 .secondary-btn {
   border: none;
@@ -126,7 +126,8 @@ input:active {
   font-size: 1rem;
   background-color: rgb(15, 15, 15);
   border: 1px solid rgb(120, 120, 120);
-  color: black;
+  color: white;
+  margin-bottom: 12px;
 }
 
 @media only screen and (max-width: 800px) {

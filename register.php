@@ -33,7 +33,7 @@
           />
     
           <label for="phone">Phone:</label>
-          <input required type="text" name="phone" id="phone" placeholder="your Phone Number" />
+          <input required type="text" name="phone" id="phone" placeholder="Your Phone Number" />
     
           <label for="email">Email:</label>
           <input required type="email" name="email" id="email" placeholder="you@gmail.com" />
@@ -46,7 +46,7 @@
           <label for="tpin">Transaction PIN (6 numbers):</label>
           <input required type="password" name="tpin" id="password" placeholder="Create your Pin" />
 
-          <input type="submit" value="Register" id="submit" />
+          <input type="submit" value="Register Now" id="submit" />
           <br />
           <a href="login.php">Already have an account?</a>
         </form>

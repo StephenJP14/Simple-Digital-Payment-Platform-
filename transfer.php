@@ -26,7 +26,7 @@
         </a>
         <div class="logo"><span class="green-text">C</span>-Pay Transfer</div>
     </nav>
-    <form action="password.php" method="post">
+    <form id="form" action="password.php" method="post">
         <input id="sender" type="text" name="sender" value="<?php echo $_SESSION['uid']; ?>" hidden>
         <input id="receiver" type="text" name="receiver" value="" hidden>
         <input id="receiverName" type="text" name="receiverName" placeholder="Receiver Name" value="" readonly>
@@ -35,18 +35,21 @@
         <label for="rec-phone-num">Receiver phone number:</label>
         <input id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
         <button type="button" onclick="checkUser()" class="secondary-btn">Verify Receiver</button>
-        <button type="button" id="submit">Submit</button>
+        <button type="button" id="submitButton">Submit</button>
     </form>
 
     <script>
         var is_checked = false;
-        $('#submit').click(function() {
-            if (is_checked) {
-                $('form').submit();
+        $('#submitButton').click(function() {
+            console.log(is_checked);
+            if (is_checked === true) {
+                console.log("benar");
+                $("form").trigger("submit");
             } else {
                 alert('Please verify receiver first');
             }
         });
+
         function checkUser() {
             var receiver = $('#receiverPhone').val();
             $.ajax({

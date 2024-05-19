@@ -58,8 +58,6 @@
             <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required>
             <input type="submit" value="Transfer" class="btn btn-primary">
           </form>
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
