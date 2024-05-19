@@ -51,6 +51,7 @@
       </div>
     </div>
   </header>
+
   <section>
     <div class="container">
       <b>History:</b>
@@ -65,6 +66,7 @@
       </table>
     </div>
   </section>
+  
   <script>
     $.ajax({
       type: "GET",
