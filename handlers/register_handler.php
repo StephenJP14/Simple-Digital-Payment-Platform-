@@ -8,6 +8,7 @@ $address = $_POST['address'];
 $phone_number = $_POST['phone'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$transaction_pin = $_POST['tpin'];
 $current_balance = 0;
 $date = date("Y-m-d H:i:s");
 $role_id = 1;
@@ -41,10 +42,10 @@ if ($result->num_rows > 0) {
     exit(); // Ensure script stops execution after redirect
 } else {
     // Hash Password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $hashed_password = hash('sha256', $password);
     // Insert ke DB
-    $stmt = $conn->prepare('INSERT INTO `user`(`name`, `phone_number`, `address`, `email`, `password`, `date_joined`, `role_id`, `user_balance`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
-    $stmt->bind_param('ssssssii', $name, $phone_number, $address, $email, $hashed_password, $date, $role_id, $current_balance);
+    $stmt = $conn->prepare('INSERT INTO `user`(`name`, `phone_number`, `address`, `email`, `password`, `date_joined`, `role_id`, `user_balance`, `transaction_pin`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);');
+    $stmt->bind_param('ssssssiis', $name, $phone_number, $address, $email, $hashed_password, $date, $role_id, $current_balance, $transaction_pin);
     $_SESSION['email'] = $email;
     $stmt->execute();
     $stmt->close();

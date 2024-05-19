@@ -43,6 +43,9 @@
           <label for="password">Confirm password:</label>
           <input type="password" name="password2" id="password" placeholder="..." />
     
+          <label for="tpin">Transaction PIN:</label>
+          <input type="password" name="tpin" id="password" placeholder="..." />
+
           <input type="submit" value="Register" id="submit" />
           <br />
           <a href="login.php">Already have an account?</a>

@@ -14,111 +14,94 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <title>C-Pay - CIT's Way to Pay</title>
   </head>
-
   <body>
+    <div class="top-bar">
+      <div class="menu">
+        <a href="#main">Home</a>
+        <a href="#features">Features</a>
+        <!-- <a href="login.php"><button class="secondary-btn">Login</button></a>
+        <a href="register.php">
+          <button class="primary-btn">Register</button></a
+        > -->
+      </div>
+    </div>
     <nav>
       <div class="nav-container">
         <div class="logo"><span class="green-text">C</span>-Pay</div>
         <div class="menu">
-          <a href="">Home</a>
-          <a href="">How to use</a>
-          <a href="">Information</a>
+          <a href="#main">Home</a>
+          <a href="#features">Features</a>
+          <a href="login.php"><button class="secondary-btn">Login</button></a>
+          <a href="register.php">
+            <button class="primary-btn">Register</button></a
+          >
+        </div>
+        <div class="hamburger">
+          <ion-icon name="menu-outline"></ion-icon>
         </div>
       </div>
     </nav>
-    <main>
-      <p class="subheadline">
-        CIT’s <b>First</b> <b class="green-text">Digital Payment</b> Gateway
-      </p>
-      <br />
-      <h1>Secure, Fast, & Reliable</h1>
+    <main id="main">
+      <div class="container">
+        <p class="subheadline">CIT'S First Digital Payment Gateway</p>
+        <h1>Secure, Fast, & Reliable</h1>
+      </div>
     </main>
-    <section class="section-1">
-      <div class="section-container">
-        <div class="floating-box box-1">
-          <h4>Bayar apapun dengan mudah dan cepat</h4>
-          <p>
-            C-Pay memudahkan seluruh civitas akademika CIT dalam hal keuangan,
-            mulai dari bayar UKT sampai belanja di Pilgrims Cafe.
-          </p>
-        </div>
-        <div class="floating-box box-2">
-          <h4>Sekarang ke Pilgrims Cafe dapat Kopi + Poin!</h4>
-          <p>
-            C-Pay menyediakan poin bagi kalian yang sering menggunakan calvin
-            pay!
-          </p>
-        </div>
-        <div class="floating-box box-3">
-          <h4>Points = Money!</h4>
-          <p>
-            Setiap poin yang kamu punya di C-Pay dapat dipakai untuk membayar
-            apapun dengan syarat dan ketentuan yang berlaku.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="section-2">
-      <div class="section-container">
-        <h1 class="subheadline">All in <span class="green-text">One</span>!</h1>
-        <p>
-          C-Pay dilengkapi dengan berbagai fitur untuk memudahkan finansial kamu
-          di CIT.
-        </p>
-        <div class="feature-list">
-          <div class="feature-card">
-            <div class="icon"><ion-icon name="qr-code-outline"></ion-icon></div>
-            <h1>Bayar pakai QR!</h1>
-            <br />
-            <p>C-Pay memudahkan transaksi di CIT menggunakan QR Code</p>
+
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="group-1">
+          <div class="feature feature-1">
+            <div class="text">
+              <h4>Bayar apapun dengan mudah dan cepat</h4>
+              <p>
+                C-Pay memudahkan seluruh civitas akademika CIT dalam hal
+                keungan, mulai dari bayar UKT sampai belanja di Pilgrims Cafe.
+              </p>
+            </div>
+            <img src="./assets/qr_scene.png" alt="" />
           </div>
-          <div class="feature-card">
-            <div class="icon"><ion-icon name="cash-outline"></ion-icon></div>
-            <h1>Transfer aja.</h1>
-            <br />
-            <p>
-              Kamu bisa melakukan transaksi atau berbagi saldo dengan sesama
-              pengguna C-Pay.
-            </p>
+          <div class="feature feature-2">
+            <div class="text">
+              <h4>Bayar apapun dengan mudah dan cepat</h4>
+              <p>
+                C-Pay memudahkan seluruh civitas akademika CIT dalam hal
+                keungan, mulai dari bayar UKT sampai belanja di Pilgrims Cafe.
+              </p>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="icon"><ion-icon name="wallet-outline"></ion-icon></div>
-            <h1>Top Up Anywhere!</h1>
-            <br />
-            <p>Isi saldo C-Pay dengan provider favoritmu!</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon"><ion-icon name="star-outline"></ion-icon></div>
-            <h1>Kumpulkan poin!</h1>
-            <br />
-            <p>Setiap transaksi masuk akan menambah C-Pay Point mu.</p>
+        </div>
+        <div class="group-1">
+          <div class="feature feature-3">
+            <div class="text">
+              <h4>All in One!</h4>
+              <p>
+                C-Pay memudahkan seluruh civitas akademika CIT dalam hal
+                keungan, mulai dari bayar UKT sampai belanja di Pilgrims Cafe.
+              </p>
+            </div>
+            <img src="./assets/Subtract.png" alt="" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-3">
-      <div class="section-container">
-        <h1>Gabung sekarang dan kumpulkan poinnya!</h1>
-      </div>
-    </section>
+    <script>
+      const ham = document.querySelector(".hamburger");
+      const topBar = document.querySelector(".top-bar");
 
-    <section class="footer">
-      <footer>
-        <div class="logo"><span class="green-text">C</span>-Pay</div>
-        <div class="right">
-          <div class="links">
-            <a href="">Home</a>
-            <a href="">Home</a>
-            <a href="">Home</a>
-          </div>
-          <div class="socials">
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
-            <a href="">Instagram</a>
-          </div>
-        </div>
-      </footer>
-    </section>
+      ham.addEventListener("click", () => {
+        console.log("called");
+        if (topBar.style.transform == "translateY(-100%)") {
+          ham.innerHTML = '<ion-icon name="close-outline"></ion-icon>';
+          topBar.style.transform = "translateY(0)";
+          topBar.style.opacity = 1;
+        } else {
+          ham.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
+          topBar.style.transform = "translateY(-100%)";
+          topBar.style.opacity = 0;
+        }
+      });
+    </script>
   </body>
 </html>
