@@ -31,9 +31,9 @@
         <input id="receiver" type="text" name="receiver" value="" hidden>
         <input id="receiverName" type="text" name="receiverName" placeholder="Receiver Name" value="" readonly>
         <label for="nominal">Nominal:</label>
-        <input require type="text" name="nominal" placeholder="Amount" id="nominal">
+        <input required type="text" name="nominal" placeholder="Amount" id="nominal">
         <label for="rec-phone-num">Receiver phone number:</label>
-        <input require id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
+        <input required id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
         <button type="button" onclick="checkUser()" class="secondary-btn">Verify Receiver</button>
         <button type="button" id="submitButton">Proceed</button>
     </form>
@@ -44,7 +44,11 @@
             console.log(is_checked);
             if (is_checked === true) {
                 console.log("benar");
-                $("form").trigger("submit");
+                if ($('#nominal').val() == '') {
+                    alert('Please fill the nominal');
+                }else{
+                    $("form").trigger("submit");
+                }
             } else {
                 alert('Please verify receiver first');
             }
