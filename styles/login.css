@@ -49,8 +49,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 400px;
-  max-width: 90%;
+  width: 400px;
   position: relative;
 }
 nav a {
@@ -78,8 +77,8 @@ form {
   padding: 24px;
   background-color: rgb(08, 08, 08);
   border-radius: 10px;
-  min-width: 400px;
-  max-width: 80%;
+  width: 400px;
+  border-radius: 1px solid red;
 }
 form a {
   text-align: center;
@@ -111,4 +110,13 @@ input:active {
   border: 1px solid var(--green);
   cursor: pointer;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    width: 90%;
+  }
+  form {
+    width: 90%;
+  }
 }

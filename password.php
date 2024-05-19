@@ -124,9 +124,10 @@
                         password: password
                     },
                     success: function(response) {
+                        response = jQuery.parseJSON(response);
                         console.log("Server response: " + response);
                         console.log(typeof(response));
-                        if (response === "1") {
+                        if (response === true) {
                             $("form").trigger("submit");
                         } else {
                             if (input_left === 0) {

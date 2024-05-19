@@ -41,7 +41,7 @@
         <input type="text" name="nominal" id="nominal" placeholder="Amount of Topup" class="form-control">
 
         <label for="merchant">Choose your Bank:</label>
-        <select name="merchant" id="merchant" class="form-control">
+        <select name="merchant" id="merchant" class="form-control" style="color: black;">
         </select>
         <input type="submit" value="Proceed" id="submit" class="btn btn-primary mt-3">
     </form>
@@ -56,7 +56,7 @@
                 let merchants = data;
                 console.log(data);
                 merchants.forEach(element => {
-                    $('#merchant').append(`<option value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
+                    $('#merchant').append(`<option style="color: black;" value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
                 });
             }
         });
