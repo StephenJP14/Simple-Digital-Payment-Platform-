@@ -58,5 +58,5 @@ echo <<<END
 END; 
 
 echo "Top Up Handler Test Success<br>";
-header("Location: ../success.php");
+header("Location: ../success.html");
 $conn->close();

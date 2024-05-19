@@ -33,13 +33,13 @@
           />
     
           <label for="phone">Phone:</label>
-          <input required type="text" name="phone" id="phone" placeholder="Create your Number />
+          <input required type="text" name="phone" id="phone" placeholder="your Phone Number" />
     
           <label for="email">Email:</label>
           <input required type="email" name="email" id="email" placeholder="you@gmail.com" />
     
           <label for="password">Password:</label>
-          <input required type="password" name="password" id="password" placeholder="Create your Password" />
+          <input required type="password" name="password" id="password" placeholder="Create new Password" />
           <label for="password">Confirm password:</label>
           <input required type="password" name="password2" id="password" placeholder="Confirm your Password" />
     
