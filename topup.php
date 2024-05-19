@@ -17,17 +17,30 @@
 
     ?>
 
-    <form action="topup.php" method="post">
-        <input type="text" name="topup" placeholder="Topup">
-        <input type="submit" value="Topup">
-        <label for="cars">Choose a car:</label>
+    <form action="./handlers/topup_handler.php" method="post" style="background-color:red;">
+        <input type="text" name="topup" placeholder="Amount of Topup" style="color:black;">
 
-        <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
+        <label for="merchant" style="color:black;">Choose your Bank:</label>
+        <select name="merchant" id="merchant" style="background-color:cyan;color:black;">
         </select>
+        <input type="submit" value="Proceed" style="color:black;">
     </form>
 
-
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "./handlers/get_merchant.php",
+            data: {},
+            success: function(data) {
+                data = jQuery.parseJSON(data);
+                let merchants = data;
+                console.log(data);
+                merchants.forEach(element => {
+                    $('#merchant').append(`<option value="${element["merchant_id"]}">${element["merchant_name"]}</option>`);
+                });
+            }
+        });
+    </script>
 
 
 </body>

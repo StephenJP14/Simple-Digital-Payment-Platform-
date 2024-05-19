@@ -44,7 +44,7 @@
           <ion-icon name="cash"></ion-icon>
           <p class="faded-text">Transfer</p>
         </a>
-        <a href="" class="feature">
+        <a href="topup.php" class="feature">
           <ion-icon name="wallet"></ion-icon>
           <p class="faded-text">Top up</p>
         </a>
@@ -77,9 +77,7 @@
         let balance = data[0];
         let transaction_history = data[1];
         // console.log(typeof(data));
-        console.log(data);
-        // console.log(balance);
-        // console.log(transaction_history[0]);
+        con        // console.log(transaction_history[0]);
 
         $('#balance').text(`Rp${balance}`);
 
