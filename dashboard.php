@@ -40,7 +40,7 @@
           <ion-icon name="qr-code"></ion-icon>
           <p class="faded-text">Scan QR</p>
         </a>
-        <a href="" class="feature">
+        <a href="transfer.php" class="feature">
           <ion-icon name="cash"></ion-icon>
           <p class="faded-text">Transfer</p>
         </a>
