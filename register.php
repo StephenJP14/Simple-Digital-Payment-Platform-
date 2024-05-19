@@ -45,7 +45,7 @@
     
           <input type="submit" value="Register" id="submit" />
           <br />
-          <a href="login.html">Already have an account?</a>
+          <a href="login.php">Already have an account?</a>
         </form>
       END;
   } else {
