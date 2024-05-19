@@ -89,7 +89,8 @@ form a:hover {
   color: var(--green);
 }
 
-input {
+input,
+button {
   border: 1px solid rgb(80, 80, 80);
   background-color: rgb(15, 15, 15);
   padding: 12px;
@@ -105,22 +106,23 @@ input:active {
   border: 1px solid var(--green);
 }
 
-#submit{
-    background-color: var(--green);
-    border: 1px solid var(--green);
-    cursor: pointer;
-    font-weight: 600;
+#submit,
+.submit {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  cursor: pointer;
+  font-weight: 600;
 }
 
-#submitButton{
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 24px;
-    margin-top: 8px;
-    background-color: var(--green);
-    border: 1px solid var(--green);
-    cursor: pointer;
-    font-weight: 600;
+#submitButton {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .secondary-btn {

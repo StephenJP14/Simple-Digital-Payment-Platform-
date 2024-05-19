@@ -47,17 +47,20 @@
     </button> -->
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
 
-      <div class="modal-content">
-        <div class="modal-header">
+      <!-- Modal Header -->
+      <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Masukkan Nomial</h4>
-        </div>
-        <div class="modal-body">
-          <div id="qrcode"></div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div id="qrcode"></div>
           <form action="password.php" method="post" id="form">
             <input type="text" id="sender" name="sender" hidden>
             <input type="text" id="receiver" name="receiver" hidden>
@@ -65,11 +68,16 @@
 
             <input type="submit" value="Transfer" class="btn btn-primary" style="background-color: white; color: black">
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        </div>
       </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
