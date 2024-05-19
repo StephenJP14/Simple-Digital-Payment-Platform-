@@ -25,12 +25,12 @@
         <div class="logo"><span class="green-text">C</span>-Pay Top up</div>
     </nav>
 
-    <form action="./handlers/topup_handler.php" method="post" style="background-color:red;">
+    <form action="./handlers/topup_handler.php" method="post">
         <label for="amount">Amount:</label>
         <input type="text" name="amount" id="amount" placeholder="Amount of Topup">
 
         <label for="merchant">Choose your Bank:</label>
-        <select name="merchant" id="merchant" style="background-color:cyan;color:black;">
+        <select name="merchant" id="merchant">
         </select>
         <input type="submit" value="Proceed" id="submit">
     </form>

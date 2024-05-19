@@ -8,7 +8,10 @@
 <body>
     
     
-
+    <form action="transfer.php" method="post">
+        <input type="text" name="amount" placeholder="Amount">
+        <input type="text" name="to" placeholder="To">
+        <input type="submit" value="Transfer">
 
     <?php
         session_start();

@@ -8,8 +8,11 @@ $servername = "localhost:3306";
 $sql_username = "stephen";
 $sql_password = "o8ivx1(EzV(I-9M4M7";
 $dbname = "stephen_db";
-// Here you can perform any necessary validation or processing with the password
 
-// For demonstration purposes, let's just echo a confirmation message
-// echo "Password received: " . $password;
-echo true;
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection Failed: " . $conn->connect_error);
+}
+
+
+$hashed_password = hash('sha256', $password);
