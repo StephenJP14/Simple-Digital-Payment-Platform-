@@ -32,6 +32,7 @@ $note = "Transfer";
 $date = date("Y-m-d H:i:s");
 
 if ($balance < $nominal){
+    
     echo "Transaction Failed, Your balance is not sufficient";
     exit();
 }else{

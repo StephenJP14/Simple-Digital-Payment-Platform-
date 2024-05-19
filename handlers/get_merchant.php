@@ -11,13 +11,13 @@ if ($conn->connect_error) {
     die("Connection failed " . $conn->connect_error);
 }
 
-$stmt = $conn->prepare('SELECT `merchant_name` FROM `merchant` WHERE 1 ');
+$stmt = $conn->prepare('SELECT `merchant_id`, `merchant_name` FROM `merchant` WHERE 1 ');
 $stmt->execute();
 $result = $stmt->get_result();
 $merchants = $result->fetch_all(MYSQLI_ASSOC);
 $stmt->close(); 
 $conn->close();
 echo json_encode($merchants);
-echo "Get Merchant Handler Test Success<br>";
+// echo "Get Merchant Handler Test Success<br>";
 
 ?>
