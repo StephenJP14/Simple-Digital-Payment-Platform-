@@ -34,9 +34,11 @@ $stmt->bind_param('ss', $email, $phone_number);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
+
 if ($result->num_rows > 0) {
     $conn->close();
-    echo "Email already exists <br>";
+    echo "Email or Phone Number already exists <br>";
+    header("refresh:3;url=../register.php");
     // sleep(3);
     // header("Location: register.php");
     exit(); // Ensure script stops execution after redirect

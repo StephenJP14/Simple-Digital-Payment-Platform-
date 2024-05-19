@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./styles/login.css">
     <title>Document</title>
 </head>
 
@@ -17,13 +18,21 @@
 
     ?>
 
-    <form action="./handlers/topup_handler.php" method="post" style="background-color:red;">
-        <input type="text" name="amount" placeholder="Amount of Topup" style="color:black;">
+    <nav>
+        <a href="dashboard.php">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+        <div class="logo"><span class="green-text">C</span>-Pay Top up</div>
+    </nav>
 
-        <label for="merchant" style="color:black;">Choose your Bank:</label>
+    <form action="./handlers/topup_handler.php" method="post" style="background-color:red;">
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount" placeholder="Amount of Topup">
+
+        <label for="merchant">Choose your Bank:</label>
         <select name="merchant" id="merchant" style="background-color:cyan;color:black;">
         </select>
-        <input type="submit" value="Proceed" style="color:black;">
+        <input type="submit" value="Proceed" id="submit">
     </form>
 
     <script>

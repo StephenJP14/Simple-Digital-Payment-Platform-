@@ -1,7 +1,5 @@
 <?php
-
-
-
+    session_start();
     // Get the password from the POST parameters
     $password = $_POST["password"];
     $hashed_transaction_pin = hash('sha256', $password);
