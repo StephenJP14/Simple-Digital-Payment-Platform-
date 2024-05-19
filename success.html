@@ -19,16 +19,23 @@
     <div class="container">
       <div class="logo"><span class="green-text">C</span>-Pay</div>
       <div class="card">
-        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <!-- <ion-icon name="checkmark-circle-outline"></ion-icon> -->
+        <div class="success-checkmark">
+          <div class="check-icon">
+            <span class="icon-line line-tip"></span>
+            <span class="icon-line line-long"></span>
+            <div class="icon-circle"></div>
+            <div class="icon-fix"></div>
+          </div>
+        </div>
         <p>Success!</p>
       </div>
     </div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = "dashboard.php";
+      }, 3000);
+    </script>
   </body>
-
-  <script>
-    setTimeout(() => {
-      window.location.href = "dashboard.php";
-    }, 3000);
-  </script>
-
 </html>

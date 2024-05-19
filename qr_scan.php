@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/qr_scan.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="./styles/qr_scan.css" />
   <title>Scan QR</title>
 </head>
 
@@ -55,7 +55,8 @@
           <form action="password.php" method="post" id="form">
             <input type="text" id="sender" name="sender" hidden>
             <input type="text" id="receiver" name="receiver" hidden>
-            <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required>
+            <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required class="nominal-input">
+
             <input type="submit" value="Transfer" class="btn btn-primary">
           </form>
         </div>
@@ -88,12 +89,12 @@
       let uid = "<?php echo $_SESSION['uid']; ?>";
       // console.log(uid);
       console.log(currentUser);
-      // $("#myModal").modal();
-      // if (document.getElementById("qrcode").style.display == "none") {
-      //     // let qrcode = new QRCode("qrcode", "transfer.php?&receiver=" + currentUser);
-      // }else{
-      //     document.getElementById("qrcode").style.display = "none";
-      // }
+      $("#myModal").modal();
+      if (document.getElementById("qrcode").style.display == "none") {
+          // let qrcode = new QRCode("qrcode", "transfer.php?&receiver=" + currentUser);
+      }else{
+          document.getElementById("qrcode").style.display = "none";
+      }
     }
   </script>
 </body>
