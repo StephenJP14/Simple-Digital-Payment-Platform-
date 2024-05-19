@@ -28,35 +28,9 @@ $stmt->bind_param('iisss', $merchant, $receiver, $date, $amount, $note);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
-echo <<<END
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <link rel="stylesheet" href="../styles/success.css" />
-    <title>Success</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo"><span class="green-text">C</span>-Pay</div>
-      <div class="card">
-        <ion-icon name="checkmark-circle-outline"></ion-icon>
-        <p>Success!</p>
-      </div>
-    </div>
-  </body>
-</html>
-END; 
 
 echo "Top Up Handler Test Success<br>";
 header("Location: ../success.html");
 $conn->close();
+exit();
+?>

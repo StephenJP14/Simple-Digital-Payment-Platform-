@@ -31,9 +31,9 @@
         <input id="receiver" type="text" name="receiver" value="" hidden>
         <input id="receiverName" type="text" name="receiverName" placeholder="Receiver Name" value="" readonly>
         <label for="nominal">Nominal:</label>
-        <input type="text" name="nominal" placeholder="Amount" id="nominal">
+        <input require type="text" name="nominal" placeholder="Amount" id="nominal">
         <label for="rec-phone-num">Receiver phone number:</label>
-        <input id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
+        <input require id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
         <button type="button" onclick="checkUser()" class="secondary-btn">Verify Receiver</button>
         <button type="button" id="submitButton">Proceed</button>
     </form>

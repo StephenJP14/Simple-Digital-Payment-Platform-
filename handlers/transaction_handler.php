@@ -42,6 +42,6 @@ if ($balance < $nominal){
 }
 
 echo "Transaction Handler Test Success<br>";
-header("refresh:3;url=../dashboard.php");
+header("Location: ../success.html");
 exit();
 ?>
