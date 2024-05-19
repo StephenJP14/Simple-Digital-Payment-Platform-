@@ -30,5 +30,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
 echo "Top Up Handler Test Success<br>";
+header("refresh:3;url=../dashboard.php");
 $conn->close();
 ?>

@@ -43,9 +43,10 @@ if ($result->num_rows > 0) {
 } else {
     // Hash Password
     $hashed_password = hash('sha256', $password);
+    $hashed_transaction_pin = hash('sha256', $transaction_pin);
     // Insert ke DB
     $stmt = $conn->prepare('INSERT INTO `user`(`name`, `phone_number`, `address`, `email`, `password`, `date_joined`, `role_id`, `user_balance`, `transaction_pin`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);');
-    $stmt->bind_param('ssssssiis', $name, $phone_number, $address, $email, $hashed_password, $date, $role_id, $current_balance, $transaction_pin);
+    $stmt->bind_param('ssssssiis', $name, $phone_number, $address, $email, $hashed_password, $date, $role_id, $current_balance, $hashed_transaction_pin);
     $_SESSION['email'] = $email;
     $stmt->execute();
     $stmt->close();

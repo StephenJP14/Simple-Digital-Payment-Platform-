@@ -55,13 +55,13 @@
     <div class="container">
       <b>History:</b>
       <table>
-        <th>
-        <td>Sender</td>
-        <td>Receiver</td>
-        <td>Amount</td>
-        <td>Date</td>
-        <td>Info</td>
-        </th>
+        <tr>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Info</th>
+        </tr>
       </table>
     </div>
   </section>
