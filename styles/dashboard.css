@@ -23,6 +23,7 @@
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .logo,
@@ -95,15 +96,44 @@ nav .profile {
 }
 
 section .container {
-  padding: 4% 10%;
+  padding: 2% 10%;
+}
+
+table {
+  padding: 0 10%;
+  border: 1px solid red;
+  width: 100%;
+  overflow-x: auto;
+}
+th, td {
+  margin: 0 12px;
+  padding: 8px 12px;
+}
+table th {
+  background-color: rgb(25, 25, 25);
 }
 
 .floating-qr {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  padding: 12px;
+  background-color: rgb(25, 25, 25);
+  width: fit-content;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: none;
+}
+.floating-qr ion-icon {
+  font-size: 3rem;
 }
 
 @media only screen and (max-width: 800px) {
+  .floating-qr {
+    display: flex;
+  }
   :root {
     font-size: 14px;
   }

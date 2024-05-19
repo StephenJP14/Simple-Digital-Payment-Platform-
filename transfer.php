@@ -17,7 +17,7 @@
     ?>
     
     <form action="password.php" method="post">
-        <input id="sender" type="text" value="<?php echo $_SESSION['uid']; ?>" hidden>
+    <input id="sender" type="text" name="sender" value="<?php echo $_SESSION['uid']; ?>" hidden>
         <input id="receiver" type="text" name="receiver" value="" hidden>
         <input id="receiverName" type="text" name="receiverName" placeholder="" value="" readonly>
         <input type="text" name="nominal" placeholder="Amount">
@@ -28,13 +28,13 @@
     
     <script>
         function checkUser(){
-            var receiver = document.querySelector('input[name="receiver"]').value;
+            var receiver = $('#receiverPhone').val();
             $.ajax({
                 url: './handlers/check_receiver.php',
                 type: 'post',
                 data: {receiver: receiver},
                 success: function(response){
-                    response = jQuery.parseJSON(data);
+                    response = jQuery.parseJSON(response);
                     if(response != 'Receiver not found'){
                         let receiverName = response['name'];
                         let receiverID = response['uid'];

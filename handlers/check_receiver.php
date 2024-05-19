@@ -14,7 +14,7 @@
         die("Connection failed" . $conn->connect_error);
     }
 
-    $stmt = $conn->prepare('SELECT `uid` , `name` FROM  `user` WHERE `phone_number` = ?');
+    $stmt = $conn->prepare('SELECT `uid`, `name` FROM  `user` WHERE `phone_number` = ?');
     $stmt->bind_param('s', $receiver);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -24,7 +24,7 @@
         $result = $result->fetch_assoc();
         echo json_encode($result);
     } else {
-        echo "Receiver not found";
+        echo json_encode("Receiver not found");
     }
     $conn->close();
     exit();

@@ -26,16 +26,16 @@ $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();
 
-$balance = $result->fetch_assoc()['user_balance'];  
+$balance = $result->fetch_assoc()['user_balance'];
 
 $note = "Transfer";
 $date = date("Y-m-d H:i:s");
 
-if ($balance < $nominal){
-    
+if ($balance < $nominal) {
+
     echo "Transaction Failed, Your balance is not sufficient";
     exit();
-}else{
+} else {
     $stmt = $conn->prepare('INSERT INTO `transaction` (`sender_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');
     $stmt->bind_param('iisss', $sender, $receiver, $date, $nominal, $note);
     $stmt->execute();
@@ -45,4 +45,3 @@ if ($balance < $nominal){
 }
 
 echo "Transaction Handler Test Success<br>";
-?>

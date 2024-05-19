@@ -11,6 +11,12 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="./styles/login.css">
     <title>Document</title>
+    <style>
+        select#merchant option {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,12 +38,12 @@
 
     <form action="./handlers/topup_handler.php" method="post">
         <label for="nominal">Nominal:</label>
-        <input type="text" name="nominal" id="nominal" placeholder="Amount of Topup">
+        <input type="text" name="nominal" id="nominal" placeholder="Amount of Topup" class="form-control">
 
         <label for="merchant">Choose your Bank:</label>
-        <select name="merchant" id="merchant">
+        <select name="merchant" id="merchant" class="form-control">
         </select>
-        <input type="submit" value="Proceed" id="submit">
+        <input type="submit" value="Proceed" id="submit" class="btn btn-primary mt-3">
     </form>
 
     <script>
@@ -55,7 +61,6 @@
             }
         });
     </script>
-
 
 </body>
 
