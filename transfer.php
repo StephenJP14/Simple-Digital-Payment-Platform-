@@ -10,9 +10,9 @@
     
     <form action="transfer.php" method="post">
         <input type="text" name="amount" placeholder="Amount">
-        <input type="text" name="to" placeholder="To">
+        <input type="text" name="receiver" placeholder="To">
+        <button type="button" onclick="checkUser()">Verify Reci</button>
         <input type="submit" value="Transfer">
-
     <?php
         session_start();
 

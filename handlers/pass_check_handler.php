@@ -16,3 +16,9 @@ if ($conn->connect_error) {
 
 
 $hashed_password = hash('sha256', $password);
+
+$stmt = $conn->prepare('SELECT `t_p[` FROM `user` WHERE `email` = ? AND `password` = ?');
+$stmt->bind_param('ss', $email, $hashed_password);
+$stmt->execute();
+$result = $stmt->get_result();
+$stmt->close();
