@@ -10,6 +10,12 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>Scan QR</title>
+  <style>
+    .nominal-input {
+      background-color: black;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,7 +63,7 @@
             <input type="text" id="receiver" name="receiver" hidden>
             <input type="text" name="nominal" id="nominal" placeholder="Masukkan Nominal" required class="nominal-input">
 
-            <input type="submit" value="Transfer" class="btn btn-primary">
+            <input type="submit" value="Transfer" class="btn btn-primary" style="background-color: white; color: black">
           </form>
         </div>
         <div class="modal-footer">
@@ -91,9 +97,9 @@
       console.log(currentUser);
       $("#myModal").modal();
       if (document.getElementById("qrcode").style.display == "none") {
-          // let qrcode = new QRCode("qrcode", "transfer.php?&receiver=" + currentUser);
-      }else{
-          document.getElementById("qrcode").style.display = "none";
+        // let qrcode = new QRCode("qrcode", "transfer.php?&receiver=" + currentUser);
+      } else {
+        document.getElementById("qrcode").style.display = "none";
       }
     }
   </script>

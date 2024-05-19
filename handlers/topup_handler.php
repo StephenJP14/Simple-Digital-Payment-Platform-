@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 
 
 $note = "Top up";
-$date = date("Y-m-d H:i:s");
+$date = date('Y-m-d H:i:s');
 
 
 $stmt = $conn->prepare('INSERT INTO `transaction` (`sender_merchant_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');

@@ -5,7 +5,7 @@ $receiver = $_POST['receiver'];
 $nominal = $_POST['nominal'];
 $password = $_POST['password'];
 
-echo "Successfully Sent to : $receiver for: $nominal <br>";
+
 
 $servername = "localhost:3306";
 $sql_username = "stephen";
@@ -26,7 +26,7 @@ $stmt->close();
 $balance = $result->fetch_assoc()['user_balance'];  
 
 $note = "Transfer";
-$date = date("Y-m-d H:i:s");
+$date = date('Y-m-d H:i:s');
 
 if ($balance < $nominal){
     echo "Transaction Failed, Your balance is not sufficient";
@@ -42,6 +42,7 @@ if ($balance < $nominal){
 }
 
 echo "Transaction Handler Test Success<br>";
+echo "Successfully Sent to : $receiver for: $nominal <br>";
 header("Location: ../success.html");
 exit();
 ?>
