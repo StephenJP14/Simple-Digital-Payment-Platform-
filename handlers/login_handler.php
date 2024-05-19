@@ -21,10 +21,10 @@ if ($conn->connect_error) {
 
 // disini ngecek hash nya, jadi yang masuk ke db itu password yang di hash
 // ok
-
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 $stmt = $conn->prepare('SELECT `uid`, `name` FROM `user` WHERE `email` = ? AND `password` = ?');
-$stmt->bind_param('ss', $email, $password);
+$stmt->bind_param('ss', $email, $hashed_password);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();

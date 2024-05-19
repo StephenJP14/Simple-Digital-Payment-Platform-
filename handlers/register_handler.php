@@ -28,8 +28,8 @@ if ($conn->connect_error) {
 }
 
 // Check if email already exists
-$stmt = $conn->prepare('SELECT `uid`, `name` FROM `user` WHERE `email` = ?');
-$stmt->bind_param('s', $email);
+$stmt = $conn->prepare('SELECT `uid`, `name` FROM `user` WHERE `email` = ? OR `phone_number` = ?');
+$stmt->bind_param('ss', $email, $phone_number);
 $stmt->execute();
 $result = $stmt->get_result();
 $stmt->close();

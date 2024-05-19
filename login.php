@@ -14,12 +14,9 @@
   <?php
   session_start();
   if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
-    // if (session_status() === PHP_SESSION_NONE){
-    //     echo PHP_SESSION_NONE;
-    // }
     if(isset($_GET['result'])){
       if($_GET['result'] === 'false'){
-        echo "<script type='text/jscript'>alert('Wrong Password!!.')</script>";
+        echo "<script type='text/jscript'>alert('Check Your Email and Password!!.')</script>";
       }
     }
     echo <<<END
