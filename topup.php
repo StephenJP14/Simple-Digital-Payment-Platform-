@@ -18,7 +18,7 @@
     ?>
 
     <form action="./handlers/topup_handler.php" method="post" style="background-color:red;">
-        <input type="text" name="topup" placeholder="Amount of Topup" style="color:black;">
+        <input type="text" name="amount" placeholder="Amount of Topup" style="color:black;">
 
         <label for="merchant" style="color:black;">Choose your Bank:</label>
         <select name="merchant" id="merchant" style="background-color:cyan;color:black;">

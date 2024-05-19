@@ -1,14 +1,12 @@
 <?php
 session_start();
 $merchant = $_POST['merchant'];
-$receiver = $_POST['receiver'];
+$receiver = $_SESSION['uid'];
 $amount = $_POST['amount'];
-$password = $_POST['password'];
 
 echo "Merchant: $merchant <br>";
 echo "Receiver: $receiver <br>";
 echo "Nominal: $nominal <br>";
-echo "Password: $password <br>";
 
 $servername = "localhost:3306";
 $sql_username = "stephen";
