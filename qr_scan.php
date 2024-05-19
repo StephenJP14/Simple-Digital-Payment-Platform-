@@ -45,7 +45,7 @@
     <div class="modal-dialog">
       <div class="modal-content" style="background-color: rgb(255, 255, 255)">
         <div class="modal-header" style="border-color: rgb(80, 80, 80);">
-          <button type="button" class="close" data-dismiss="modal" style="color: white">
+          <button type="button" class="close" data-dismiss="modal" style="color: black">
             &times;
           </button>
           <h4 class="modal-title">Masukkan Nomial</h4>
@@ -55,7 +55,7 @@
           <form action="password.php" method="post" id="form">
             <input type="text" id="sender" name="sender" hidden />
             <input type="text" id="receiver" name="receiver" hidden />
-            <input type="number" name="nominal" id="nominal" placeholder="Masukkan Nominal" required style="color:white; background-color: transparent;" />
+            <input type="number" name="nominal" id="nominal" placeholder="Masukkan Nominal" required style="color:black; background-color: transparent;" />
             <input type="submit" value="Transfer" class="btn primary-btn" id="submit" />
           </form>
         </div>
