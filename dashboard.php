@@ -33,7 +33,7 @@
       </nav>
       <div class="balance">
         <p class="faded-text">Balance:</p>
-        <h1 class="green-text" id="balance">Rp200.000.000.000,-</h1>
+        <h1 class="green-text" id="balance">-</h1>
       </div>
       <div class="features">
         <a href="qr_scan.php" class="feature">
@@ -57,12 +57,8 @@
   <script>
     $.ajax({
       type: "GET",
-      url: "./handlers/dashboard_handler.php",
+      url: "./handlers/dashboard_balance.php",
       data: {
-        // sender: 1,
-        // receiver: 2,
-        // nominal: 1000,
-        // password: "password"
       },
       success: function(data) {
         data = jQuery.parseJSON(data);
