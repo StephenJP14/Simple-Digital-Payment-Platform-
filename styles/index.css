@@ -125,6 +125,7 @@ button {
 }
 .secondary-btn {
   background-color: rgb(15, 15, 15);
+  border: 1px solid rgb(120, 120, 120);
 }
 
 main {
@@ -146,6 +147,12 @@ main .container {
   background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0, 0));
   padding: 0;
 }
+main .buttons {
+  display: flex;
+  gap: 12px;
+  margin: 10%;
+  display: none;
+}
 
 main .container h1 {
   font-size: 3rem;
@@ -159,6 +166,9 @@ main .container h1 {
 @media only screen and (max-width: 800px) {
   * main {
     height: 80vh;
+  }
+  main .buttons {
+    display: flex;
   }
   main .container {
     text-align: start;
@@ -239,7 +249,6 @@ section .container {
   /* margin-right: 12px;
   margin-bottom: 12px; */
   border-radius: 10px;
-  transform: translateY(-12px) translateX(-12px);
 }
 
 .feature-2 {
@@ -263,12 +272,37 @@ section .container {
   margin-top: 24px;
 }
 
+footer .container {
+  padding: 4% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 32px 0;
+}
+.icons ion-icon {
+  font-size: 2rem;
+}
+footer .container i {
+  margin-top: 4%;
+  color: rgb(100, 100, 100);
+}
+
 @media only screen and (max-width: 800px) {
   :root {
     font-size: 14px;
   }
   * {
     font-size: 1rem;
+  }
+  .logo {
+    font-size: 2rem;
   }
   h4 {
     font-size: 20px;

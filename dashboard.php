@@ -33,7 +33,7 @@
       </nav>
       <div class="balance">
         <p class="faded-text">Balance:</p>
-        <h1 class="green-text" id="balance">Rp200.000.000.000,-</h1>
+        <h1 class="green-text" id="balance">-</h1>
       </div>
       <div class="features">
         <a href="qr_scan.php" class="feature">
@@ -66,7 +66,7 @@
       </table>
     </div>
   </section>
-  
+
   <script>
     $.ajax({
       type: "GET",

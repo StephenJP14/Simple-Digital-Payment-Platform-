@@ -6,7 +6,6 @@ $amount = $_POST['amount'];
 
 echo "Merchant: $merchant <br>";
 echo "Receiver: $receiver <br>";
-echo "Nominal: $nominal <br>";
 
 $servername = "localhost:3306";
 $sql_username = "stephen";
