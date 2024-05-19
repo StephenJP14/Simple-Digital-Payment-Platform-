@@ -35,10 +35,18 @@
         <label for="rec-phone-num">Receiver phone number:</label>
         <input id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
         <button type="button" onclick="checkUser()" class="secondary-btn">Verify Receiver</button>
-        <input type="submit" value="Transfer" id="submit">
+        <button type="button" id="submit">Submit</button>
     </form>
 
     <script>
+        var is_checked = false;
+        $('#submit').click(function() {
+            if (is_checked) {
+                $('form').submit();
+            } else {
+                alert('Please verify receiver first');
+            }
+        });
         function checkUser() {
             var receiver = $('#receiverPhone').val();
             $.ajax({
@@ -54,6 +62,7 @@
                         let receiverID = response['uid'];
                         $('#receiverName').val(receiverName);
                         $('#receiver').val(receiverID);
+                        is_checked = true;
                     } else {
                         alert('User does not exist');
                     }

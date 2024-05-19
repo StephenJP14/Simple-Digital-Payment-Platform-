@@ -38,7 +38,7 @@
 
     <form action="./handlers/topup_handler.php" method="post">
         <label for="nominal">Nominal:</label>
-        <input type="text" name="nominal" id="nominal" placeholder="Amount of Topup" class="form-control">
+        <input required type="text" name="nominal" id="nominal" placeholder="Amount of Topup" class="form-control">
 
         <label for="merchant">Choose your Bank:</label>
         <select name="merchant" id="merchant" class="form-control" style="color: black;">

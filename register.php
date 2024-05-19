@@ -33,18 +33,18 @@
           />
     
           <label for="phone">Phone:</label>
-          <input type="text" name="phone" id="phone" placeholder="you@gmail.com" />
+          <input required type="text" name="phone" id="phone" placeholder="Create your Number />
     
           <label for="email">Email:</label>
-          <input type="email" name="email" id="email" placeholder="you@gmail.com" />
+          <input required type="email" name="email" id="email" placeholder="you@gmail.com" />
     
           <label for="password">Password:</label>
-          <input type="password" name="password" id="password" placeholder="..." />
+          <input required type="password" name="password" id="password" placeholder="Create your Password" />
           <label for="password">Confirm password:</label>
-          <input type="password" name="password2" id="password" placeholder="..." />
+          <input required type="password" name="password2" id="password" placeholder="Confirm your Password" />
     
-          <label for="tpin">Transaction PIN:</label>
-          <input type="password" name="tpin" id="password" placeholder="..." />
+          <label for="tpin">Transaction PIN (6 numbers):</label>
+          <input required type="password" name="tpin" id="password" placeholder="Create your Pin" />
 
           <input type="submit" value="Register" id="submit" />
           <br />

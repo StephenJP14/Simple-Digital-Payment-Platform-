@@ -5,10 +5,7 @@ $receiver = $_POST['receiver'];
 $nominal = $_POST['nominal'];
 $password = $_POST['password'];
 
-echo "Sender: $sender <br>";
-echo "Receiver: $receiver <br>";
-echo "Nominal: $nominal <br>";
-echo "Password: $password <br>";
+echo "Successfully Sent to : $receiver for: $nominal <br>";
 
 $servername = "localhost:3306";
 $sql_username = "stephen";
@@ -32,8 +29,8 @@ $note = "Transfer";
 $date = date("Y-m-d H:i:s");
 
 if ($balance < $nominal){
-    
     echo "Transaction Failed, Your balance is not sufficient";
+    header("refresh:3;url=../dashboard.php");
     exit();
 }else{
     $stmt = $conn->prepare('INSERT INTO `transaction` (`sender_id`, `receiver_id`,`t_date` ,`amount`, `t_info`) VALUES (?,?,?,?,?); ');
@@ -45,3 +42,6 @@ if ($balance < $nominal){
 }
 
 echo "Transaction Handler Test Success<br>";
+header("refresh:3;url=../dashboard.php");
+exit();
+?>
