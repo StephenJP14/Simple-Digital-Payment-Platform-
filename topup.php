@@ -17,7 +17,10 @@
 
     <?php
     session_start();
-
+    if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
+        header("Location: login.php");
+        exit();
+    }
     ?>
 
     <nav>
@@ -28,8 +31,8 @@
     </nav>
 
     <form action="./handlers/topup_handler.php" method="post">
-        <label for="amount">Amount:</label>
-        <input type="text" name="amount" id="amount" placeholder="Amount of Topup">
+        <label for="nominal">Nominal:</label>
+        <input type="text" name="nominal" id="nominal" placeholder="Amount of Topup">
 
         <label for="merchant">Choose your Bank:</label>
         <select name="merchant" id="merchant">

@@ -2,7 +2,7 @@
 session_start();
 $merchant = $_POST['merchant'];
 $receiver = $_SESSION['uid'];
-$amount = $_POST['amount'];
+$amount = $_POST['nominal'];
 
 echo "Merchant: $merchant <br>";
 echo "Receiver: $receiver <br>";

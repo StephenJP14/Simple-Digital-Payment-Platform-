@@ -4,19 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     
-    
-    <form action="transfer.php" method="post">
-        <input type="text" name="amount" placeholder="Amount">
-        <input type="text" name="receiver" placeholder="To">
-        <button type="button" onclick="checkUser()">Verify Reci</button>
-        <input type="submit" value="Transfer">
     <?php
         session_start();
-
+        if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
+            header("Location: login.php");
+            exit();
+          }
     ?>
+    
+    <form action="password.php" method="post">
+        <input id="sender" type="text" value="<?php echo $_SESSION['uid']; ?>" hidden>
+        <input id="receiver" type="text" name="receiver" value="" hidden>
+        <input id="receiverName" type="text" name="receiverName" placeholder="" value="" readonly>
+        <input type="text" name="nominal" placeholder="Amount">
+        <input id="receiverPhone" type="text" name="receiverPhone" placeholder="Receiver Phone Number">
+        <button type="button" onclick="checkUser()">Verify Receiver</button>
+        <input type="submit" value="Transfer">
+    </form>
+    
+    <script>
+        function checkUser(){
+            var receiver = document.querySelector('input[name="receiver"]').value;
+            $.ajax({
+                url: 'checkUser.php',
+                type: 'post',
+                data: {receiver: receiver},
+                success: function(response){
+                    response = jQuery.parseJSON(data);
+                    if(response != 'Receiver not found'){
+                        let receiverName = response['name'];
+                        let receiverID = response['uid'];
+                        $('#receiverName').val(receiverName);
+                        $('#receiver').val(receiverID);
+                    }else{
+                        alert('User does not exist');
+                    }
+                }
+            });
+        }
+
+    </script>
 
 
 </body>
