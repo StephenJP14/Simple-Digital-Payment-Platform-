@@ -52,7 +52,18 @@
     </div>
   </header>
   <section>
-    <b>History:</b>
+    <div class="container">
+      <b>History:</b>
+      <table>
+        <th>
+        <td>Sender</td>
+        <td>Receiver</td>
+        <td>Amount</td>
+        <td>Date</td>
+        <td>Info</td>
+        </th>
+      </table>
+    </div>
   </section>
   <script>
     $.ajax({
