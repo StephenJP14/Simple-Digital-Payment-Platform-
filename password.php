@@ -18,20 +18,10 @@
         </a>
         <div class="logo"><span class="green-text">C</span>-Pay</div>
     </nav>
-    <?php
-    session_start();
-    if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
-        header("Location: login.php");
-        exit();
-    }
-
-    $sender = $_POST['sender'];
-    $receiver = $_POST['receiver'];
-    $nominal = $_POST['nominal'];
-    ?>
     <div class="container">
-        <p style="margin-top: 20px;">Transfer to <?php echo $receiver; ?></p>
-        <p>Amount: Rp<span class="green-text"><?php echo $nominal; ?></span></p>
+        <p style="margin-top: 32px">Tran</p>
+        <p>Receiver: P</p>
+        <p>Amount: Rp<span class="green-text">202002020</span></p>
         <div class="row">
             <form class="col-md-4 offset-md-4" action="./handlers/transaction_handler.php" method="post">
                 <input type="text" name="sender" value="<?php echo $sender; ?>" hidden />
@@ -39,47 +29,28 @@
                 <input type="text" name="nominal" value="<?php echo $nominal; ?>" hidden />
                 <input type="password" id="passwordInput" name="password" class="form-control mb-3" readonly />
                 <center>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        1
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        2
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        3
-                    </button>
+                    <button type="button" class="btn btn-primary numpad-button">1</button>
+                    <button type="button" class="btn btn-primary numpad-button">2</button>
+                    <button type="button" class="btn btn-primary numpad-button">3</button>
                     <br />
-                    <button type="button" class="btn btn-primary numpad-button">
-                        4
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        5
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        6
-                    </button>
+                    <button type="button" class="btn btn-primary numpad-button">4</button>
+                    <button type="button" class="btn btn-primary numpad-button">5</button>
+                    <button type="button" class="btn btn-primary numpad-button">6</button>
                     <br />
-                    <button type="button" class="btn btn-primary numpad-button">
-                        7
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        8
-                    </button>
-                    <button type="button" class="btn btn-primary numpad-button">
-                        9
-                    </button>
+                    <button type="button" class="btn btn-primary numpad-button">7</button>
+                    <button type="button" class="btn btn-primary numpad-button">8</button>
+                    <button type="button" class="btn btn-primary numpad-button">9</button>
                     <br />
-                    <button type="button" class="btn btn-primary numpad-button">
-                        0
-                    </button>
+                    <button type="button" class="btn btn-primary numpad-button">0</button>
                     <br />
                     <br />
                 </center>
             </form>
             <div class="buttons">
-                <button type="button" class="btn btn-primary" id="clearButton">
-                    Clear
-                </button>
+                <button type="button" class="btn btn-primary" id="clearButton">Clear</button>
+                <!-- <button type="button" class="btn btn-primary" id="submit">
+            Submit
+          </button> -->
             </div>
         </div>
     </div>
