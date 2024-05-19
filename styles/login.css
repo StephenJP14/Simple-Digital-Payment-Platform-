@@ -105,12 +105,23 @@ input:active {
   border: 1px solid var(--green);
 }
 
-#submitButton{
+#submit{
     background-color: var(--green);
     border: 1px solid var(--green);
     cursor: pointer;
     font-weight: 600;
-  }
+}
+
+#submitButton{
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    cursor: pointer;
+    font-weight: 600;
+}
 
 .secondary-btn {
   border: none;

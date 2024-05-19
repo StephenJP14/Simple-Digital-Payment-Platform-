@@ -35,7 +35,7 @@
         <label for="rec-phone-num">Receiver phone number:</label>
         <input id="receiverPhone" type="text" name="receiverPhone" id="rec-phone-number" placeholder="Receiver Phone Number">
         <button type="button" onclick="checkUser()" class="secondary-btn">Verify Receiver</button>
-        <button type="button" id="submitButton">Submit</button>
+        <button type="button" id="submitButton">Proceed</button>
     </form>
 
     <script>

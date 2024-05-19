@@ -31,7 +31,7 @@
           <input required type="email" name="email" id="email" placeholder="you@gmail.com" />
           <label for="password">Password:</label>
           <input required type="password" name="password" id="password" placeholder="..." />
-          <input type="submit" value="Login" id="submit" />
+          <input type="submit" value="Login" id="submit"/>
           <br />
           <a href="register.php">Dont have an account?</a>
         </form>

@@ -76,6 +76,9 @@
     let qrcode = new QRCode("qrcode", "transfer.php?&receiver=" + currentUser);
     document.getElementById("qrcode").style.display = "none";
     document.getElementById("qrcode").style.justifyContent = "center";
+    document.getElementById("my-qr-reader__scan_region").style.display = 'flex'
+    document.getElementById("my-qr-reader__scan_region").style.justifyContent = 'center'
+    document.querySelector("#my-qr-reader__scan_region video").style.width = '100%'
 
     function showQR() {
       $(".modal-title").text("My QR Code");
