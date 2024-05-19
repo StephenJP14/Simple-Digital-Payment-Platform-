@@ -12,6 +12,19 @@
 </head>
 
 <body>
+
+    <?php
+    session_start();
+    if (session_status() === PHP_SESSION_NONE || !isset($_SESSION['email'])) {
+        header("Location: login.php");
+        exit();
+    }
+
+    $sender = $_POST['sender'];
+    $receiver = $_POST['receiver'];
+    $nominal = $_POST['nominal'];
+    ?>
+
     <nav>
         <a href="dashboard.php">
             <ion-icon name="arrow-back-outline"></ion-icon>
@@ -19,9 +32,8 @@
         <div class="logo"><span class="green-text">C</span>-Pay</div>
     </nav>
     <div class="container">
-        <p style="margin-top: 32px">Tran</p>
-        <p>Receiver: P</p>
-        <p>Amount: Rp<span class="green-text">202002020</span></p>
+        <p style="margin-top: 32px">Transfer to <?php echo $receiver; ?></p>
+        <p>Amount: Rp<span class="green-text"><?php echo $nominal; ?></span></p>
         <div class="row">
             <form class="col-md-4 offset-md-4" action="./handlers/transaction_handler.php" method="post">
                 <input type="text" name="sender" value="<?php echo $sender; ?>" hidden />
