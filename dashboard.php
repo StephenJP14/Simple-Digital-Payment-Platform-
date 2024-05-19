@@ -69,7 +69,8 @@
   <script>
     $.ajax({
       type: "GET",
-      url: "./handlers/dashboard_balance.php",
+      url: "./handlers/das
+        hboard_balance.php",
       data: {
       },
       success: function(data) {
