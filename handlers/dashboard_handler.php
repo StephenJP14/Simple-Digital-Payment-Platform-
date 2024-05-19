@@ -29,7 +29,7 @@
     $stmt->close();
 
     $transactions = $result->fetch_all(MYSQLI_ASSOC);
-    
+    $all_transactions = [];  
     foreach($transactions as $row){
         // echo json_encode($transaction);
         if ($row['sender_id'] === $uid) {
