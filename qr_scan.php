@@ -48,7 +48,7 @@
           <button type="button" class="close" data-dismiss="modal" style="color: black">
             &times;
           </button>
-          <h4 class="modal-title">Masukkan Nomial</h4>
+          <h4 class="modal-title" style="color: black;">Masukkan Nomial</h4>
         </div>
         <div class="modal-body">
           <div id="qrcode"></div>
