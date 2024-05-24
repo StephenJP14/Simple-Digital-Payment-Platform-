@@ -15,14 +15,15 @@ if ($conn->connect_error) {
   die("Connection failed" . $conn->connect_error);
 }
 
-$stmt = $conn->prepare('DELETE FROM user WHERE uid = ?');
-$stmt->bind_param('i', $uid);
-$stmt->execute();
-$stmt->close();
+$stmt = $conn->prepare('DELETE FROM users WHERE uid = ?');
+echo $uid;
+// $stmt->bind_param('i', $uid);
+// $stmt->execute();
+// $stmt->close();
 
-$conn->close();
+// $conn->close();
 
-header('Location: ../logout.php');
+// header('Location: ../logout.php');
 exit();
 
 
