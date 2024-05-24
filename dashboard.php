@@ -48,6 +48,10 @@
           <ion-icon name="wallet"></ion-icon>
           <p class="faded-text">Top up</p>
         </a>
+        <a href="./handlers/delete_account_handler.php" class="feature">
+          <ion-icon name="alert-outline"></ion-icon>
+          <p class="faded-text">Delete Account</p>
+        </a>
       </div>
     </div>
   </header>
